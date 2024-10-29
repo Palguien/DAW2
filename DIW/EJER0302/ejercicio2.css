@@ -1,0 +1,16 @@
+div{
+    background-color: orange;
+    margin: 5px;
+    border-style: solid;
+}
+.main{
+    background-color: white;
+    float: left;
+    width: 40%;
+}
+footer{
+    clear: both;
+    background-color: orange;
+    margin: 5px;
+    border-style: solid;
+}

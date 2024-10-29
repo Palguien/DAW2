@@ -1,0 +1,63 @@
+/*Pablo Pollos*/
+body{
+    background-color: rgb(196, 196, 196);
+}
+
+h1{
+    text-align: center;
+}
+
+.c1{
+    padding-top: 10px;
+    text-align: center;
+    border-style: solid;
+    width: 80%;
+    height: 60px;
+    background-color: burlywood;
+    border-color: rgb(91, 64, 28);
+    position: relative;
+    left: 10%;
+}
+
+.caja{
+    border-style: solid;
+    width: 35%;
+    margin: 20px;
+    height: 120px;
+    padding: 10px;
+}
+
+.c2{
+    float:left;
+    background-color: rgb(225, 225, 143);
+    border-color: yellow;
+    text-align: left;
+}
+.c3{
+    float:right;
+    background-color: rgb(190, 237, 237);
+    border-color: rgb(50, 73, 73);
+    text-align: right;
+}
+.c4{
+    float:left;
+    background-color: pink;
+    border-color: rgb(208, 86, 106);
+    text-align: left;
+}
+.c5{
+    float:right;
+    background-color: rgb(199, 119, 119);
+    border-color: red;
+    text-align: right;
+}
+
+.c6{
+    z-index: 1;
+    position: absolute;
+    top: 26%;
+    left: 30%;
+    background-color: greenyellow;
+    border-color: green;
+    text-align: center;
+}

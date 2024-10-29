@@ -1,0 +1,116 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 900px;
+}
+
+.contenedorDivs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 1400px; 
+}
+
+.col {
+    padding: 20px;
+}
+
+.fichasX{
+    display: flex;
+    flex-direction: column;
+}
+.fichasX div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+    margin-top: 40px;
+}
+.fichasO{
+    display: flex;
+    flex-direction: column;
+}
+.fichasO div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+#x1, #x2, #x3, #o1, #o2, #o3{
+    height: 100px;
+    width: 100px;
+}
+#x1:hover, #x2:hover, #x3:hover{
+    background: linear-gradient(rgb(224, 70, 238), rgba(0, 0, 0, 0.845));
+    background-size: cover; /* Asegura que la imagen de fondo cubra el área */
+    cursor: pointer;
+    background-color: rgb(224, 70, 238);
+    transform: scale(1.2);  
+}
+#o1:hover, #o2:hover, #o3:hover{
+    background: linear-gradient(rgb(30, 198, 70), rgba(0, 0, 0, 0.5));
+    background-size: cover; /* Asegura que la imagen de fondo cubra el área */
+    cursor: pointer;
+    background-color: rgb(30, 198, 70);
+    transform: scale(1.2); 
+}
+.fichas.marcado{
+background-color: blue;
+}
+
+.tablero {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 400px;
+    height: 400px;
+    background-color: transparent;  
+}
+.celda {    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    background-color: rgba(235, 230, 230, 0.911);
+}
+
+.celda:nth-child(1), .celda:nth-child(2), .celda:nth-child(3){
+    border-bottom: 4px solid black;
+}
+.celda:nth-child(4), .celda:nth-child(5), .celda:nth-child(6){
+    border-bottom: 4px solid black;
+}
+.celda:nth-child(1), .celda:nth-child(4), .celda:nth-child(7){
+    border-right: 4px solid black;
+}
+.celda:nth-child(2), .celda:nth-child(5), .celda:nth-child(8){
+    border-right: 4px solid black;
+}
+
+.celda:hover {
+    transform: scale(1.05); 
+    background-color: rgba(143, 142, 142, 0.795);
+}
+
+.turnoActual {
+   text-align: center;
+}
+
+p{
+    font-weight: bold;
+    font-size: 25px;
+    color: rgb(197, 21, 21);
+}
+#turnoIMG{
+    width: 120px;
+    height: 120px;
+}
+span{
+    font-weight: bold;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title></title>
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Grenze&display=swap');
+        @import "estilo_ejercicio_04.css";
+    </style>
+
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">ANA GLORIA PALACIOS CAMINERO</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">1116400.00000000</mso:Order>
+<mso:ComplianceAssetId msdt:dt="string"></mso:ComplianceAssetId>
+<mso:_ExtendedDescription msdt:dt="string"></mso:_ExtendedDescription>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">ANA GLORIA PALACIOS CAMINERO</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:TriggerFlowInfo msdt:dt="string"></mso:TriggerFlowInfo>
+<mso:ContentTypeId msdt:dt="string">0x010100C3C7178536661F4ABFD11A53ED6B623B</mso:ContentTypeId>
+<mso:_SourceUrl msdt:dt="string"></mso:_SourceUrl>
+<mso:_SharedFileIndex msdt:dt="string"></mso:_SharedFileIndex>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+<body>
+    <h1>Formularios</h1>
+    <form>
+        <fieldset>
+            <legend>Creación de Personaje</legend>
+            <div>
+                <label for="nombre">Nombre del Personaje</label>
+                <input id="nombre" type="text" name="nombre" placeholder="Nombre del Personaje" pattern="[a-zA-Z]+">
+            </div>
+            <div>
+                <label for="profesion">Profesión</label>
+                <select id="profesion" name="profesion">
+                <option value="medico">Médico</option>
+                <option value="policia">Policía</option>
+                <option value="musico">Músico</option>
+                <option value="conductor">Conductor</option>
+                </select>
+            </div>
+            <div>
+                <label for="puntosCordura">Puntos de Cordura</label>
+                <input id="puntosCordura" type="number" min="1" max="100" value="50" > 
+            </div>
+            <div>
+                <label for="dificultad">Dificultad extra</label>
+                <input id="dificultad" type="checkbox" value="dificultadExtra">
+            </div>
+            <div>
+                <input type="submit" value="Crear Personaje" name="submit">
+            </div>
+            <div>
+                <p>Algunos campos son obligatorios, como por ejemplo <a href="#nombre"> el nombre</a>, por favor, revísalos.</p>
+            </div>
+
+        </fieldset>
+    </form>
+</body>
+
+</html>

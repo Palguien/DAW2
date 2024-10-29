@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tresEnRaya.css">
+    <title>Juego 3 en Raya</title>
+</head>
+<body>
+    <header>
+        <h1>TRES EN RAYA 2.0</h1>
+    </header>
+    <div class="contenedorDivs">
+        <div class="col fichasX">
+            <div>
+                <img class="ficha" id="x1" src="assets/x1.png" alt="Turno del jugador"/> <span id="TX1">∞</span>
+            </div>
+            <div>
+                <img class="ficha" id="x2" src="assets/x2.png" alt="Turno del jugador"/> <span id="TX2">3</span>
+            </div>
+            <div>
+                <img class="ficha" id="x3" src="assets/x3.png" alt="Turno del jugador"/> <span id="TX3">3</span>
+            </div>
+           
+        </div>
+        <div class="col tablero">
+            <div class="celda" id="1"></div>
+            <div class="celda" id="2"></div>
+            <div class="celda" id="3"></div>
+            <div class="celda" id="4"></div>
+            <div class="celda" id="5"></div>
+            <div class="celda" id="6"></div>
+            <div class="celda" id="7"></div>
+            <div class="celda" id="8"></div>
+            <div class="celda" id="9"></div>
+
+        </div>
+        <div class="col fichasO">
+            <div>
+                <img class="ficha" id="o1" src="assets/o1.png" alt="Turno del jugador"/> <span id="TO1">∞</span>
+            </div>
+            <div>
+                <img class="ficha" id="o2" src="assets/o2.png" alt="Turno del jugador"/> <span id="TO2">3</span>
+            </div>
+            <div>
+                <img class="ficha" id="o3" src="assets/o3.png" alt="Turno del jugador"/> <span id="TO3">3</span>
+            </div>
+        </div>
+    </div>
+    <div class="col turnoActual">
+        <p>Turno Actual:</p>
+        <img id="turnoIMG" src="assets/x1.png" alt="Turno del jugador"/>
+    </div>
+    
+    <script src="tresEnRaya.js" defer></script>
+    
+</body>
+</html>

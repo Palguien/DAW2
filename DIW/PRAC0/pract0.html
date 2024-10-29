@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica0</title>
+    <meta author="Pablo Pollos">
+    <style type="text/css">
+		header{
+		    background-color: rgb(16, 137, 16);
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            padding: 10px;
+		}
+        .encabezado{
+            color: antiquewhite;
+            background-color: blue;
+            border-radius: 10px;
+            border-color: black;
+            border: solid;
+        }
+        .caja,.cajaHead{
+            border-radius: 10px;
+        }
+        .trampa{
+            color:green;
+        }
+        .cajaHead{
+            border-radius: 20%;
+            background-color: greenyellow;
+            text-align: center;
+        }
+        .cajaHead:hover{
+            background-color:orange;
+        }
+        a,u{
+            color:green;
+        }
+        .dcha{
+            text-align: right;
+        }
+        main{
+            border: solid;
+            border-color: green;
+            border-radius: 10px;
+        }
+        .cosaDeFlex{
+            display:flex;
+            justify-content: flex-end;
+        }
+        .texto{
+            border-bottom: dotted;
+        }
+        .barra{
+            float: right;
+        }
+		
+	</style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Todo FP</h1>
+            <p>www.educacion.gob.es</p>
+        </div>
+
+        <div class="barra">
+            <table>
+                <tr>
+                    <td><div class="cajaHead">Inicio</div></td>
+                    <td><div class="cajaHead">Información</div></td>
+                    <td><div class="cajaHead">Cursos</div></td>
+                    <td><div class="cajaHead">Alumnos</div></td>
+                    <td><div class="cajaHead">Ayuda</div> </td>
+                </tr>
+            </table>    
+        </div>
+        <br>
+        
+    </header>
+    <main>
+        <table>
+            <tr>
+                <td>
+                    <div class="caja">
+                        <div class="encabezado">ÁREA DE USUARIOS</div>
+                        <div>
+                            <form method="GET" action="">
+                                <label for="id">ID de Usuario:</label><br>
+                                <input type="text" id="id" name="id"/><br>
+                                <label for="psw">Contraseña:</label><br>
+                                <input type="text" id="psw" name="psw"/><br>
+                                <input type="submit" id="enviar"/>
+                                <br><a href="falsoenlace.html" class="resaltado">Olvidaste la contraseña</a>
+                            </form>
+                        </div>
+                    </div>
+
+                </td>
+
+                <td colspan="2" rowspan="2">
+                    <div class="caja"></div>
+                        <div class="encabezado"><p>¡BIENVENIDOS A TODOFP!</p><p class="dcha">Oct.10,2011</p></div>
+                        <div class="texto">
+                            <div><img src="FP.png" alt="img2"></div>
+                            <p>FP a distancia. Esta oferta está dirigida a especialmente a aquellaspersonas que, por diferentes razones (no solo laborales) no pueden cursar en los centros educativos, y en el horario presencial, la <u>Formación Profesional</u>. Por tanto, mayoritariamente será el colectivo de personas adultas el destinatario de esta modalidad de enseñanza. Toda la información desde la web:<u>FP online</u>. ¡¡Matricúlate!!</p>
+                        </div>
+                    </div>
+                </td>
+
+                <td rowspan="2">
+                    <div class="caja">
+                        <div class="encabezado">WEBS DE INTERÉS</div>
+                        <div>
+                            <ul>
+                                <li><a href="falsoenlace.html">TodoFP</a></li>
+                                <li><a href="falsoenlace.html">FP on line</a></li>
+                                <li><a href="falsoenlace.html">Platega</a></li>
+                                <li><a href="falsoenlace.html">IES San Clemente</a></li>
+                            </ul>
+                            <br>
+                            <img src="FP2.png" alt="img2">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="encabezado">UNIDADES DE TRABAJO</div>
+                    <div></div>
+                </td>
+            </tr>
+        </main>
+        
+    </div>
+</body>
+</html>

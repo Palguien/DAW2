@@ -1,0 +1,71 @@
+/*Pablo Pollos*/
+body{
+    background-color: rgb(165, 199, 241);
+}
+.container{
+    margin: auto;
+    padding-top: 30px;
+    width: 720px;
+    border-style: solid;
+    border-color: blue;
+    background-color: rgb(86, 139, 208);
+}
+.container::before{
+    content: url('logos.png');
+    padding: 30px;
+}
+.lorem{
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 20px;
+    background-color: blue;
+    color: white;
+    border-bottom-style: dotted;
+    border-color: rgb(93, 93, 187);
+}
+h1{
+    text-align: center;
+    border-style: solid ;
+    border-color: white;
+    margin-right: 20%;
+    margin-left: 20%;
+    padding: 20px;
+}
+
+.phasellus{
+    background-color: orange;
+    margin-right: 10%;
+    margin-left: 10%;
+    padding: 10px;
+
+}
+
+.carabitur::before{
+    content: url('computer.png');
+    float: left;
+    margin-right: 20px;
+    padding: 30px;
+    padding-left: 15px;
+}
+ul{
+    position: relative;
+    left: 35px;
+}
+
+h2{
+    background-image: url(patron.jpg);
+}
+h2:nth-child(even){
+    margin-right: 10px;
+    float: right;
+    text-align: right;
+    width: 400px;
+}
+h2:nth-child(odd){
+    margin-left: 10px;
+    text-align: left;
+    width: 400px;
+}
+p{
+   padding: 5px; 
+}

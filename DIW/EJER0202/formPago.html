@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta author="Pablo Pollos">
+    <style type="text/css">
+        .boton{
+            background-color: black;
+            color: aliceblue;
+        }
+    </style>
+    <title>Formulario de Pago</title>
+</head>
+<body>
+    <p><strong>FORMULARIO DE PAGO</strong> (Los campos obligatorios se han marcado con *)</p>
+    <form method="GET" action="">
+        <fieldset>
+            <legend>Información de contacto</legend>
+
+            <fieldset>
+                <legend>Profesión</legend>
+                <input type="radio" id="pro" name="prof" value="pro" />
+                <label for="pro">Sr/Sra</label>
+                <input type="radio" id="est" name="prof" value="est" />
+                <label for="est">Estudiante</label>
+                <input type="radio" id="otro" name="prof" value="otro" />
+                <label for="otro">Otro</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Tratamiento</legend>
+                <input type="radio" id="sir" name="trat" value="sir" />
+                <label for="sir">Sr/Sra</label>
+                <input type="radio" id="doc" name="trat" value="doc" />
+                <label for="doc">Dr/Dra</label>
+                <input type="radio" id="otro" name="trat" value="otro" />
+                <label for="otro">Otro</label>
+            </fieldset>
+            <br>
+            <label for="nombre">Nombre *</label><br>
+            <input type="text" id="nombre" name="nombre"/><br>
+            <label for="correo">Correo *</label><br>
+            <input type="text" id="correo" name="correo"/><br>
+            <label for="telef">Número de teléfono *</label><br>
+            <input type="text" id="telef" name="telef"/><br>
+            <label for="password">Contraseña *</label><br>
+            <input type="text" id="password" name="password"/><br>     
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Información de pago</legend>
+
+            <label for="tarjeta">Tipo de tarjeta: </label> 
+            <select name="tarjeta">
+                <option value="Visa">Visa</option>
+                <option value="Mastercard">Mastercard</option>
+                <option value="Black">Tarjeta Black</option>
+            </select>
+
+            <br><br>
+            <label for="num">Número de tarjeta *</label><br>
+            <input type="text" id="num" name="num"/><br>
+            <label for="fecha">Fecha de caducidad *</label><br>
+            <input type="date" id="fecha" name="fecha"/><br><br>
+            <label for="paypal">Cuanta de paypal *</label><br>
+            <input type="text" id="paypal" name="paypal"/><br><br>
+
+            <label for="pago">Método de pago: </label> 
+            <select name="pago">
+                <option value="Crédito">Tarjeta de crédito</option>
+                <option value="Débito">Tarjeta de débito</option>
+                <option value="Trueque">Trueque</option>
+            </select>
+
+        </fieldset>
+        <br>
+        <input class="boton" type="submit" id="enviar" name="enviar" value="VALIDAR EL PAGO"/>
+    </form>
+    
+    
+</body>
+</html>
