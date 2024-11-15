@@ -1,0 +1,30 @@
+body{
+    background-color: black;
+}
+
+ul{
+    background-color: rgb(19, 43, 6);
+    color: rgb(167, 167, 167);
+    width: 330px;
+    list-style: none;
+    margin-left: -30px;
+}
+
+li{
+    background-color: rgb(19, 43, 6);
+    margin: 5px;
+    padding: 3px;
+    border-bottom: solid;
+    border-bottom-color: rgb(129, 184, 48);
+    border-width: 1px;
+    margin-right: 20px;
+    transition: background-color 1s 250ms;
+}
+
+li:hover{
+    
+    transition: background-color 10ms;
+    background-color: rgb(129, 184, 48);
+    color: white;
+}
+

@@ -1,0 +1,39 @@
+body{
+    background-color: blanchedalmond;
+}
+h1{
+    color:green;
+    text-decoration: underline;
+}
+th{
+    background-color: green;
+    color: aliceblue;
+    border-color: black;
+    border-style: solid;
+}
+table{
+    border-color: black;
+    border-style: solid;
+    border-collapse: collapse;
+    width: 600px;
+}
+td{
+    border-color: black;
+    border-style: solid;
+}
+tr:nth-child(even){
+    background-color: white;
+}
+tr:nth-child(odd){
+    background-color: blanchedalmond;
+}
+p{
+    margin-left: 450px;
+    margin-bottom: -20px;
+}
+td:nth-child(3){
+    color: green;
+}
+div{
+    align-content: center;
+}
