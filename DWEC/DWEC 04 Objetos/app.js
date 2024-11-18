@@ -30,6 +30,28 @@ class Empleado{
     getSueldo(){
         return this.#sueldo;
     }
+
+    
+    render(){
+        let fila = document.createElement("tr");
+
+        let nombre = document.createElement("td");
+        let apellido = document.createElement("td");
+        let nacimiento = document.createElement("td");
+        let sueldo = document.createElement("td");
+
+        nombre.textContent = this.#nombre;
+        apellido.textContent = this.#apellido;
+        nacimiento.textContent = this.#nacimiento;
+        sueldo.textContent = this.#sueldo;
+
+        fila.appendChild(nombre);
+        fila.appendChild(apellido);
+        fila.appendChild(nacimiento);
+        fila.appendChild(sueldo);
+
+        return fila;
+    }
 }
 
 let empleados = [
@@ -43,84 +65,23 @@ let empleados = [
 ]
 
 let tabla = document.getElementById("lista-empleados");
-let elementos = [];
-empleados.forEach(empleado => { 
-    tabla.innerHTML += empleado;
-    elementos.push(empleado);
+empleados.forEach(empleado =>{
+    let fila=empleado.render();
+    tabla.appendChild(fila);
 });
-let flag = "";
+let boton=document.getElementById("formulario-enviar");
+boton.addEventListener('click',evento =>{
+    evento.preventDefault();
 
-//th clicables que ordenan por lo que indique cada uno
+    let nombre = document.getElementById('nombre').value;
+    let apellido = document.getElementById('apellido').value;
+    let nacimiento = document.getElementById('nacimiento').value;
+    let sueldo = document.getElementById('sueldo').value;
+    
+    let empleado = new Empleado(nombre,apellido,nacimiento,sueldo);
+    empleados.push(empleado);
 
-function refreshTabla(){
-    tabla.innerHTML="";
-    elementos.forEach(empleado => { 
-        tabla.innerHTML += empleado;
-    });
-}
-
-function ordenarSueldo() {
-    if(flag=="sueldo"){
-        let ordenSue = elementos.sort((a,b) => {
-            return b.getSueldo() - a.getSueldo();
-        });
-        flag="sueldoReverse";
-    }else{
-        let ordenSue = elementos.sort((a,b) => {
-            return a.getSueldo() - b.getSueldo();
-        });
-        flag="sueldo";
-    }
-        
-    refreshTabla();
-}
-
-function ordenarNacimiento() {
-    if(flag=="nacimiento"){
-        let ordenNac = elementos.sort((a,b) => {
-            return b.getNacimiento() - a.getNacimiento();
-        });
-        flag="nacimientoReverse";
-    }else{
-        let ordenNac = elementos.sort((a,b) => {
-            return a.getNacimiento() - b.getNacimiento();
-        });
-        flag="nacimiento";
-    }
-    refreshTabla();
-}
-
-function ordenarApellido() {
-    if(flag=="apellido"){
-        let ordenApe = elementos.sort((a,b) => {
-            return (b.getApellido()).localeCompare(a.getApellido());
-        });
-        flag="apellidoReverse";
-    }else{
-        let ordenApe = elementos.sort((a,b) => {
-            return (a.getApellido()).localeCompare(b.getApellido());
-        });
-        flag="apellido";
-    }
-    refreshTabla();
-}
-
-function ordenarNombre() {
-    if(flag=="nombre"){
-        let ordenNom = elementos.sort((a,b) => {
-            return (b.getNombre()).localeCompare(a.getNombre());
-        });
-        flag="nombreReverse";
-    }else{
-        let ordenNom = elementos.sort((a,b) => {
-            return (a.getNombre()).localeCompare(b.getNombre());
-        });
-        flag="nombre";
-    }
-    refreshTabla();
-}
-
-document.getElementById("nombre").addEventListener("click", ordenarNombre);
-document.getElementById("apellido").addEventListener("click", ordenarApellido);
-document.getElementById("nacimiento").addEventListener("click", ordenarNacimiento);
-document.getElementById("sueldo").addEventListener("click", ordenarSueldo);
+    let tabla = document.getElementById("lista-empleados");
+    let fila = empleado.render();
+    tabla.appendChild(fila);
+})

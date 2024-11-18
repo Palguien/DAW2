@@ -18,10 +18,47 @@
             background-color: gainsboro;
             cursor: pointer;
         }
+        .formulario{
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            width: 320px;
+        }
+
+        .formulario-fila{
+            width: auto;
+            text-align: left;
+            margin: 1px;
+        }
+
+        .formulario-fila button{
+            margin: 8px 0;
+            margin-right: 10px;
+        }
     </style>
 </head>
 <body>
-
+    <form action="get" class="formulario">
+        <div class="formulario-fila">
+            <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre"><br>
+        </div>
+        <div class="formulario-fila">
+            <label for="apellido">Apellido</label>
+            <input type="text" name="apellido" id="apellido"><br>
+        </div>
+        <div class="formulario-fila">
+            <label for="nacimiento">Nacimiento</label>
+            <input type="number" name="nacimiento" id="nacimiento" value="1999"><br>
+        </div>
+        <div class="formulario-fila">
+            <label for="sueldo">Sueldo</label>
+            <input type="number" name="sueldo" id="sueldo"><br>
+        </div>
+        <div class="formulario-fila"></div>
+        <div class="formulario-fila">
+            <button id="formulario-enviar">Añadir</button>
+        </div>
+    </form>
     <table>
         <thead>
             <th id="nombre">Nombre</th>

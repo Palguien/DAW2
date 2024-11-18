@@ -124,3 +124,4 @@ document.getElementById("nombre").addEventListener("click", ordenarNombre);
 document.getElementById("apellido").addEventListener("click", ordenarApellido);
 document.getElementById("nacimiento").addEventListener("click", ordenarNacimiento);
 document.getElementById("sueldo").addEventListener("click", ordenarSueldo);
+
