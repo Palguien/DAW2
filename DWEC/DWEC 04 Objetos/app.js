@@ -61,7 +61,7 @@ let empleados = [
     new Empleado("Perma","Trago",1991,74000),
     new Empleado("Misty","Articuno",1987,37000),
     new Empleado("Giovanni","Vazquez",1000,20000),
-    new Empleado("Lagartijo","Iguana",1993,54000),
+    new Empleado("Lagartijo","Iguano",1993,54000),
 ]
 
 let tabla = document.getElementById("lista-empleados");
