@@ -1,0 +1,58 @@
+body{
+    background-color: gray;
+}
+header{
+    background-color: rgb(241, 241, 111);
+    height: 90px;
+    border: solid;
+    color: rgb(180, 180, 180);
+    border-radius: 20px;
+    padding: 10px;
+}
+main{
+    display: flex;
+}
+nav,aside{
+    background-color: rgb(142, 203, 238);
+    height: 400px;
+    width: 20%;
+    border: solid;
+    color: rgb(180, 180, 180);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+article{
+    background-color: rgb(141, 241, 111);
+    height: 400px;
+    width: 60%;
+    border: solid;
+    color: rgb(180, 180, 180);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+footer{
+    background-color: rgb(241, 241, 111);
+    height: 90px;
+    border: solid;
+    color: rgb(180, 180, 180);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+@media(max-width:640px){
+    article{
+        order: -1;
+    }
+    article, nav, aside{
+        width: 100%;
+    }
+    nav,aside{
+        height: 90px;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+}
