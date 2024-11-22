@@ -9,5 +9,12 @@ body.appendChild(bloque);
 bloque.appendChild(titulo);
 bloque.appendChild(texto);
 
+let form = document.createElement("form");
+form.setAtttribute("action","get");
+form.setAtttribute("class","formulario");
+body.appendChild(form);
+
+
+
 //element.setAttribute(attr, value)
 //miElemento.serAttribite("class","nuevaClase")
