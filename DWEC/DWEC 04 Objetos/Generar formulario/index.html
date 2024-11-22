@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            text-align: center;
+            border: solid;
+            border-collapse:collapse;
+        }
+        td,th{
+            border: solid;
+        }
+        th:hover{
+            background-color: gainsboro;
+            cursor: pointer;
+        }
+        .formulario{
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            width: 320px;
+        }
+
+        .formulario-fila{
+            width: auto;
+            text-align: left;
+            margin: 1px;
+        }
+
+        .formulario-fila button{
+            margin: 8px 0;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="get" class="formulario">
+        <div class="formulario-fila">
+            <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre"><br>
+        </div>
+        <div class="formulario-fila">
+            <label for="apellido">Apellido</label>
+            <input type="text" name="apellido" id="apellido"><br>
+        </div>
+        <div class="formulario-fila">
+            <label for="nacimiento">Nacimiento</label>
+            <input type="number" name="nacimiento" id="nacimiento" value="1999"><br>
+        </div>
+        <div class="formulario-fila">
+            <label for="sueldo">Sueldo</label>
+            <input type="number" name="sueldo" id="sueldo"><br>
+        </div>
+        <div class="formulario-fila">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="emailf"><br>
+        </div>
+        <div class="formulario-fila">
+            <label for="dni">DNI</label>
+            <input type="text" name="dni" id="dnif"><br>
+        </div>
+        <div class="formulario-fila">
+            <label for="fecha">Fecha</label>
+            <input type="text" name="fecha" id="fechaf"><br>
+        </div>
+        <div class="formulario-fila">
+            <button id="formulario-enviar">Añadir</button>
+        </div>
+    </form>
+    <table>
+        <thead>
+            <th id="nombre">Nombre</th>
+            <th id="apellido">Apellido</th>
+            <th id="nacimiento">Año nacimiento</th>
+            <th id="sueldo">Sueldo</th>
+            <th id="email">Email</th>
+            <th id="dni">DNI</th>
+            <th id="fecha">Fecha</th>
+        </thead>
+        <tbody id="lista-empleados">
+        </tbody>
+    </table>
+
+    <script src="app.js"></script>
+</body>
+</html>
