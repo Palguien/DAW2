@@ -99,9 +99,9 @@ boton.addEventListener('click',evento =>{
     let apellido = document.getElementById('apellido').value;
     let nacimiento = document.getElementById('nacimiento').value;
     let sueldo = document.getElementById('sueldo').value;
-    let email = document.getElementById('email').value;
-    let dni = document.getElementById('dni').value;
-    let fecha = document.getElementById('fecha').value;
+    let email = document.getElementById('emailf').value;
+    let dni = document.getElementById('dnif').value;
+    let fecha = document.getElementById('fechaf').value;
 
     if(validarEmail(email) && validarDNI(dni) && validarFecha(fecha)){
         let empleado = new Empleado(nombre,apellido,nacimiento,sueldo,email,dni,fecha);
