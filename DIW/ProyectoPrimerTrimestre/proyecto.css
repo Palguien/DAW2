@@ -1,0 +1,164 @@
+body{
+    background-color: #F4F4F4;
+}
+
+header{
+    height: 270px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    background-image: url(imagenes/header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    border-style: solid;
+    border-color: black;
+    text-align: center;
+    line-height: 6;
+}
+
+main{
+    margin: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.poi{
+    margin: 70px;
+    height: 330px;
+    width: 236px;
+    border: solid;
+    border-color: black;
+    margin-bottom: 100px;
+    box-shadow: 10px 5px 5px black;
+    overflow: hidden;
+}
+
+img{
+    width: 236px;
+    height: 165px;
+}
+
+h2{
+    font-family: "Montserrat", sans-serif;
+    font-weight: normal;
+    margin-top: 0px;
+}
+
+p{
+    font-family: "Open Sans", sans-serif;
+}
+.p2{
+    text-align: right;
+    margin-right: 10px;
+}
+
+.poi:hover img{
+    height: 330px;
+    transition: height 1.75s 250ms;
+}
+
+.sobre{
+    background-color: black;
+    opacity: 0%;
+    width: 236px;
+    height: 335px;
+    z-index: 1;
+    margin-top: -340px;
+    color: aliceblue;
+    text-align: center;
+    line-height: 20;
+    position: relative;
+}
+
+.poi:hover .sobre{
+    opacity: 70%;
+    margin-top: -505px;
+    transition: margin-top 1.75s 250ms,opacity 1s ease-in;
+}
+
+h3{
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+aside{
+    width: 300px;
+    border-style: solid;
+    border-color: gray;
+    z-index: 2;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: aliceblue;
+    height: 100%;
+    transition: all 0.5s ease-in;
+    box-shadow: 5px 2px 2px rgb(85, 85, 85);
+}
+
+.barraParte{
+    color: grey;
+    float: left;
+    height: 52px;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+}
+
+.barraTexto{
+    margin-top: 5px;
+    margin-left: 10px;
+}
+.selected{
+    border-style: solid;
+    border-color: gray;
+    border-left-width: 20px;
+    width: 93%;
+    background-color: #EDEEEF;
+}
+.barraParte:hover{
+    background-color: #EDEEEF;
+}
+
+.num{
+    float: right;
+    background-color: lightsteelblue;
+    border-radius: 40px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    padding: 5px;
+    line-height: 1;
+    margin-top: -10px;
+    margin-right: 10px;
+}
+
+.flecha{
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    background-color: grey;
+    padding: 10px;
+    position: relative;
+    top: 400px;
+    left: 280px;
+    background-image: url(imagenes/flechita.png);
+    background-size: cover;
+    border-color: gray;
+    transition: all 0.5s ease-in;
+}
+
+.flecha:hover{
+    cursor: pointer;
+}
+
+.plegado{
+    background-color: #666;
+    margin-left: -280px;
+    transition: all 0.5s ease-in;
+}
+.giro{
+    transform: rotate(-180deg);
+    transition: all 0.5s ease-in;
+}
+

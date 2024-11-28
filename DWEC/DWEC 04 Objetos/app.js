@@ -240,4 +240,3 @@ function blurFecha(){
         alert("Fecha incorrecta");
     }
 }
-

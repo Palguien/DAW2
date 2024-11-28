@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Pablo Pollos">
+    <title>Document</title>
+    <style>
+        @import url(proyecto.css);
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    </style>
+</head>
+<body>
+    <header><h1>BENAVENTE</h1></header>
+
+    <main>
+        <div class="poi">
+            <img class="img1" src="imagenes/1.jpg">
+            <h2>Nombre de sitio</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero nesciunt eos modi</p>
+            <p class="p2">Benavente</p>
+            <div class="sobre">Nombre de sitio</div>
+        </div>
+
+        <div class="poi">
+            <img class="img1" src="imagenes/2.jpg">
+            <h2>Nombre de sitio</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero nesciunt eos modi</p>
+            <p class="p2">Benavente</p>
+            <div class="sobre">Nombre de sitio</div>
+        </div>
+
+        <div class="poi">
+            <img class="img1" src="imagenes/3.jpg">
+            <h2>Nombre de sitio</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero nesciunt eos modi</p>
+            <p class="p2">Benavente</p>
+            <div class="sobre">Nombre de sitio</div>
+        </div>
+
+        <div class="poi">
+            <img class="img1" src="imagenes/4.jpg">
+            <h2>Nombre de sitio</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero nesciunt eos modi</p>
+            <p class="p2">Benavente</p>
+            <div class="sobre">Nombre de sitio</div>
+        </div>
+
+        <div class="poi">
+            <img class="img1" src="imagenes/5.jpg">
+            <h2>Nombre de sitio</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero nesciunt eos modi</p>
+            <p class="p2">Benavente</p>
+            <div class="sobre">Nombre de sitio</div>
+        </div>
+
+        <div class="poi">
+            <img class="img1" src="imagenes/6.jpg">
+            <h2>Nombre de sitio</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero nesciunt eos modi</p>
+            <p class="p2">Benavente</p>
+            <div class="sobre">Nombre de sitio</div>
+        </div>
+    </main>
+
+    <aside class="menu">
+        <h3>BENAVENTE</h3>
+        <div class="barraParte selected">
+            <div class="barraTexto">TURISMO</div>
+            <div class="num">12</div>
+            <div class="barraTexto">EN BENAVENTE</div>
+        </div>
+        <div class="barraParte">
+            <div class="barraTexto">HOTELES</div>
+            <div class="num">12</div>
+            <div class="barraTexto">EN BENAVENTE</div>
+        </div>
+        <div class="barraParte">
+            <div class="barraTexto">QUÉ VER</div>
+            <div class="num">12</div>
+            <div class="barraTexto">EN BENAVENTE</div>
+        </div>
+        <div class="barraParte">
+            <div class="barraTexto">RESTAURANTES</div>
+            <div class="num">12</div>
+            <div class="barraTexto">EN BENAVENTE</div>
+        </div>
+        <div class="barraParte">
+            <div class="barraTexto">FOTOS</div>
+            <div class="num">412</div>
+            <div class="barraTexto">EN BENAVENTE</div>
+        </div>
+        <div class="flecha"></div>
+    </aside>
+
+    <!-- Linea de codigo para implementar jQuery-->
+    <script type='text/javascript' src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script>
+        // Preparamos el documento para que añada y quite el elemento plegado
+        $(document).ready(function(){
+            $(".flecha").click(function(){
+                $(".menu").toggleClass("plegado");
+                $(".flecha").toggleClass("giro");
+            })
+        });
+    </script>
+</body>
+</html>
