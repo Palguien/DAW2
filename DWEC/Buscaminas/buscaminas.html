@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUSCAMINAS</title>
+    <style>
+        td{
+            height: 20px;
+            width: 20px;
+        }
+        .bomba{
+            background-color: cyan;
+        }
+        .bomba:active{
+            background-color: red;
+        }
+        .vacio{
+            background-color: cyan;
+        }
+        .activado{
+            background-color: greenyellow;
+        }
+        .vacio:hover,.bomba:hover{
+            height: 20px;
+            width: 20px;
+            background-color: rgb(78, 213, 218);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form class="formulario">
+        <div class="formulario-fila">
+            <label for="minas">Nºde minas:</label>
+            <input type="number" name="minas" id="minas"><br>
+        </div>
+        <div class="formulario-fila">
+            <label for="casillas">Casillas por lado:</label>
+            <input type="number" name="casillas" id="casillas"><br>
+        </div>
+    </form>
+    <div id="filas"></div>
+    <div id="faltan"></div>
+    <button id="a">Inicio</button>
+    <table id="tablero-contenedor" border="solid"></table>
+    <script src="generarTablero.js"></script>
+</body>
+</html>
