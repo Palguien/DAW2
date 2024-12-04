@@ -108,7 +108,7 @@ function correcto(){
                 if(id%fila!=0 && id-fila>=0){//atras arriba
                     document.getElementById(id-fila-1).click();
                 }
-                if(id%fila!=0 && id+fila>=(fila*fila)){//atras abajo             
+                if(id%fila!=0 && id+fila>=(fila*fila)){//atras abajo   SUS          
                     document.getElementById(id+fila-1).click();
                 }
                 if((id+1)%fila!=0){         //delante
@@ -117,7 +117,7 @@ function correcto(){
                 if((id+1)%fila!=0 && id-fila>=0){//delante arriba
                     document.getElementById(id-fila+1).click();
                 }
-                if((id+1)%fila!=0 && id+fila>=(fila*fila)){//delante abajo            
+                if((id+1)%fila!=0 && id+fila>=(fila*fila)){//delante abajo   SUS         
                     document.getElementById(id+fila+1).click();
                 }
                 if(id+fila<(fila*fila)){    //debajo

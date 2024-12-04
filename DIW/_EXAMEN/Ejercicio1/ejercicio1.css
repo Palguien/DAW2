@@ -1,0 +1,81 @@
+body{
+    background-color: orangered;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+}
+.caja{
+    background-color: aliceblue;
+    border-radius: 40px;
+    width: 60%;
+    height:400px;
+    display: flex;
+    justify-content: center;
+}
+.cajaDN{
+    width: 40%;
+}
+.circulo{
+    width: 80px;
+    height: 80px;
+    background-color: orangered;
+    border-radius: 50px;
+    position: relative;
+    left: 30%;
+    top:25%;
+
+}
+.selector{
+    background-color: grey;
+    border-radius: 40px;
+    height: 30px;
+    width: 120px;
+    display: flex;
+    position: relative;
+    left: 20%;
+    top:45%;
+    text-align: center;
+}
+.dia{
+    background-color: aliceblue;
+    border-radius: 40px;
+    width: 60px;
+    box-shadow: 2px 2px 2px;
+    line-height: 2;
+}
+.noche{
+    width: 40px;
+    line-height: 2;
+    margin-left: 5px;
+}
+.cajaForm{
+    width: 50%;
+    margin-top: 80px;
+    margin-left: 20px;
+}
+form{
+    width: 40%;
+}
+input, textarea{
+    border-style: none;
+    background-color: aliceblue;
+    border-bottom-style: solid;
+    border-bottom-color: grey;
+    margin: 5px;
+}
+h1{
+    color: grey;
+    font-family: sans-serif;
+    text-align: center;
+    margin: 15px;
+}
+button{
+    background-color: black;
+    color:aliceblue;
+    border-radius:40px;
+    text-align: center;
+    width: 180px;
+    padding: 5px;
+    margin: 5px;
+}
+
