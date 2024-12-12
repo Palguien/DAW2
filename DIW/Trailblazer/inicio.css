@@ -1,0 +1,122 @@
+body{
+    background-color: rgb(241, 213, 160);
+    margin: 0px;
+}
+.banner{
+    width: 100%;
+    content: url(img/banner.jpg);
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+}
+/*header*/
+header{
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    background-color: orange;
+    margin-top: 0px;
+}
+.login{
+    height: 75%;
+    width: 150px;
+    color:rgb(0, 0, 112);
+    background-color: orange;
+    float: right;
+    font-size: larger;
+    font-weight: bold;
+    margin: 10px;
+    border-radius: 40px;
+}
+.login:hover{
+    cursor: pointer;
+    background-color: rgb(196, 105, 2);
+}
+.logo{
+    content: url(img/logo.png);
+    height: 75%;
+    margin: 10px;
+    border-radius: 40px;
+    float: left;
+}
+h1{
+    height: 75%;
+    margin: 10px;
+    float: left;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 2;
+    color: rgb(37, 37, 37);
+}
+.buscador{
+    height: 75%;
+    margin: 10px;
+    float: left;
+    border-radius: 40px;
+    background-color: rgb(175, 175, 175);
+}
+.buscar{
+    height: 30px;
+    width: 30px;
+    float: left;
+    margin: 15px;
+}
+.busqueda{
+    border: none;
+    border-radius: 40px;
+    text-align: center;
+    padding: 3px;
+    float: left;
+    margin-top: 17px;
+    margin-left: 5px;
+    margin-right: 10px;
+    height: 20px;
+}
+/*footer*/
+footer{
+    margin-top: 50px;
+    width: 100%;
+    height: 80px;
+    background-color: orange;
+}
+/*main*/
+.contMain{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+main{
+    width: 80%;
+    background-color: antiquewhite;
+    border-radius: 30px;
+    margin: 20px;
+    padding: 10px;
+}
+.cita1{
+    clear: both;
+    margin-left: 70px;
+    margin-right: 70px;
+    text-align: center;
+    margin-top: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-style: oblique;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.img1{
+    height: 200px;
+    width: auto;
+    float: left;
+}
+.caja{
+    float: right;
+    height: 200px;
+    width: auto;
+}
+.img2{
+    height: 200px;
+    width: auto;
+}
+hr{
+    clear: both;
+    margin: 50px;
+}

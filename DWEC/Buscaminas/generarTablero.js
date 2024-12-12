@@ -2,12 +2,15 @@
 //document.getElementById("formulario-enviar").addEventListener("click", tablero);
 document.getElementById("a").addEventListener("click", inicio);
 
+var llamadas = 0;
+
 function inicio() {
 
     let table = document.getElementById("tablero-contenedor");
     table.innerHTML = "";
     
     let minas=document.getElementById("minas").value;
+
     let lado=document.getElementById("casillas").value;
     let casillas=lado*lado;
     let arrayTablero = generarBombas(casillas,minas);
@@ -15,6 +18,7 @@ function inicio() {
 
     document.getElementById("filas").setAttribute("class",`${lado}`);
     document.getElementById("faltan").setAttribute("class",`${casillas-minas}`);
+    document.getElementById("fin").setAttribute("class","false");
 
     for (let index = 0; index < lado; index++) {
         let tr = document.createElement("tr");
@@ -65,36 +69,50 @@ function generarBombas(casillas, minas) {
 }
 
 function explota(){
-    console.log("BUM");
-    alert("Clicaste una bomba");
-    alert("Fin del juego");
-    inicio();
-}
+    if(document.getElementById("fin").getAttribute("class")=="false"){
+        let listaBombas = document.querySelectorAll("td.bomba");
 
-function victoria() {
-    alert("Ganaste");
-    alert("Fin del juego");
-    inicio();
-}
+        listaBombas.forEach(bomba => {
+            bomba.setAttribute("class","bum");
+            bomba.innerHTML = "X";
+        });
 
-function banderita() {
-    if(event.target.innerHTML==""){
-        event.target.innerHTML="P";        
-    }else{
-        if(event.target.innerHTML=="P") {
-            event.target.innerHTML="";
-        }
+        alert("Clicaste una bomba");
+        alert("Fin del juego");
+        document.getElementById("fin").setAttribute("class","true");
     }
     
 }
 
+function victoria() {
+    let listaBombas = document.querySelectorAll("td.bomba");
+
+    listaBombas.forEach(bomba => {
+        bomba.setAttribute("class","desactivada");
+        bomba.innerHTML = "X";
+    });
+    alert("Ganaste");
+    alert("Fin del juego");
+    document.getElementById("fin").setAttribute("class","true");
+}
+
+function banderita() {
+    if(document.getElementById("fin").getAttribute("class")=="false"){
+        if(event.target.innerHTML==""){
+            event.target.innerHTML="P";        
+        }else{
+            if(event.target.innerHTML=="P") {
+                event.target.innerHTML="";
+            }
+        }
+    }
+}
+
 function correcto(){
-    if(event.target.getAttribute("class","vacio")=="vacio"){
+    if(event.target.getAttribute("class","vacio")=="vacio" && document.getElementById("fin").getAttribute("class")=="false"){
         let faltan = document.getElementById("faltan").getAttribute("class");
         faltan=faltan-1;
-        if(faltan==0){
-            victoria();
-        }else{
+        
             document.getElementById("faltan").setAttribute("class",`${faltan}`);
             event.target.setAttribute("class","activado");
             let numero = comprobacionBombas(event.target.getAttribute("id"));
@@ -103,34 +121,69 @@ function correcto(){
             if(numero==0){
                 event.target.innerHTML=="";
                 if(id%fila!=0){             //atras
-                    document.getElementById(id-1).click();
+                    if(document.getElementById(id-1).getAttribute("class")=="vacio"){
+                        llamadas++;
+                        console.log(llamadas);
+                        document.getElementById(id-1).click();
+                    }
                 }
                 if(id%fila!=0 && id-fila>=0){//atras arriba
-                    document.getElementById(id-fila-1).click();
+                    if(document.getElementById(id-fila-1).getAttribute("class")=="vacio"){
+                        llamadas++;
+                        console.log(llamadas);
+                        document.getElementById(id-fila-1).click();
+                    }
                 }
-                if(id%fila!=0 && id+fila>=(fila*fila)){//atras abajo   SUS          
-                    document.getElementById(id+fila-1).click();
+                if(id%fila!=0 && id+fila<=(fila*fila)){//atras abajo  
+                    if(document.getElementById(id+fila-1).getAttribute("class")=="vacio"){
+                        llamadas++;
+                        console.log(llamadas);
+                        document.getElementById(id+fila-1).click();
+                    }         
                 }
                 if((id+1)%fila!=0){         //delante
-                    document.getElementById(id+1).click();
+                    if(document.getElementById(id+1).getAttribute("class")=="vacio"){
+                        llamadas++;
+                        console.log(llamadas);
+                        document.getElementById(id+1).click();
+                    }
                 }
                 if((id+1)%fila!=0 && id-fila>=0){//delante arriba
-                    document.getElementById(id-fila+1).click();
+                    if(document.getElementById(id-fila+1).getAttribute("class")=="vacio"){
+                        llamadas++;
+                        console.log(llamadas);
+                        document.getElementById(id-fila+1).click();
+                    }
                 }
-                if((id+1)%fila!=0 && id+fila>=(fila*fila)){//delante abajo   SUS         
-                    document.getElementById(id+fila+1).click();
+                if((id+1)%fila!=0 && id+fila<=(fila*fila)){//delante abajo
+                    if(document.getElementById(id+fila+1).getAttribute("class")=="vacio"){
+                        llamadas++;
+                        console.log(llamadas);
+                        document.getElementById(id+fila+1).click();
+                    }
                 }
                 if(id+fila<(fila*fila)){    //debajo
-                    document.getElementById(id+fila).click();
+                    if(document.getElementById(id+fila).getAttribute("class")=="vacio"){
+                        llamadas++;
+                        console.log(llamadas);
+                        document.getElementById(id+fila).click();
+                    }
                 }
                 if(id-fila>=0){             //arriba
-                    document.getElementById(id-fila).click();
+                    if(document.getElementById(id-fila).getAttribute("class")=="vacio"){
+                        llamadas++;
+                        console.log(llamadas);
+                        document.getElementById(id-fila).click();
+                    }
+                    
                 }
                 
             }else{
                 event.target.innerHTML=numero;
             }
             
+        if(faltan==0){
+            victoria();
         }
     }
 }
@@ -178,3 +231,4 @@ function comprobacionBombas(casilla) {
 
     return cont;
 }
+

@@ -7,14 +7,17 @@
     <title>BUSCAMINAS</title>
     <style>
         td{
-            height: 20px;
-            width: 20px;
+            height: 30px;
+            width: 30px;
         }
         .bomba{
             background-color: cyan;
         }
-        .bomba:active{
+        .bum{
             background-color: red;
+        }
+        .desactivada{
+            background-color: orange;
         }
         .vacio{
             background-color: cyan;
@@ -23,18 +26,35 @@
             background-color: greenyellow;
         }
         .vacio:hover,.bomba:hover{
-            height: 20px;
-            width: 20px;
+            height: 30px;
+            width: 30px;
             background-color: rgb(78, 213, 218);
             cursor: pointer;
+        }
+        h1, form,.boton,input{
+            text-align: center;
+            margin: 5px;
+        }
+        table{
+            margin: auto;
+        }
+
+        button{
+            width: 200px;
+            height: 30px;
+        }
+        button:hover{
+            cursor: pointer;
+            background-color: grey;
         }
     </style>
 </head>
 <body>
+    <h1>BUSCAMINAS</h1>
     <form class="formulario">
         <div class="formulario-fila">
             <label for="minas">Nºde minas:</label>
-            <input type="number" name="minas" id="minas"><br>
+            <input type="number" name="minas" id="minas" placeholder="max total casillas"><br>
         </div>
         <div class="formulario-fila">
             <label for="casillas">Casillas por lado:</label>
@@ -43,8 +63,9 @@
     </form>
     <div id="filas"></div>
     <div id="faltan"></div>
-    <button id="a">Inicio</button>
-    <table id="tablero-contenedor" border="solid"></table>
+    <div id="fin"></div>
+    <div class="boton"><button id="a">Inicio</button></div>
+    <table id="tablero-contenedor"></table>
     <script src="generarTablero.js"></script>
 </body>
 </html>
