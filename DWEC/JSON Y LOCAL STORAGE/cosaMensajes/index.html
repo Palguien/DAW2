@@ -5,14 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quepassa</title>
+    <style>
+        .yo{
+            width: 60%;
+            padding: 10px;
+            background-color: greenyellow;
+            float: right;
+            margin: 5px;
+            border-radius: 10px;
+            text-align: right;
+        }
+        .otro{
+            width: 60%;
+            padding: 10px;
+            background-color: rgb(130, 192, 37);
+            float: left;
+            margin: 5px;
+            border-radius: 10px;
+            
+        }
+        form{
+            height: 20px;
+            background-color: gainsboro;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-    <div class="barra mensajes">
-        <form class="formulario">
-            <label for="mensaje">Mensaje:</label>
-            <input type="text" name="mensaje" placeholder="Mensaje..."><br>        
-        </form>
-        <div class="boton"><button id="a">Inicio</button></div>
+    <form class="formulario">
+        <input type="text" name="user" id="user" placeholder="Usuario...">
+        <input type="text" name="mensaje" id="mensaje" placeholder="Mensaje...">
+        <button id="enviar">Enviar</button>
+        <button id="borrar">Borrar</button>
+    </form>
+
+    <div id="barra_mensajes">   
     </div>
 
     <script src="mensajes.js"></script>
