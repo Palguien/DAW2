@@ -31,13 +31,15 @@ document.addEventListener('DOMContentLoaded',event => {
 });
 
 
+function fechaActual(){
+    let fecha = new Date();
+    return fecha.toLocaleString();
+}
 
 
 function guardarMensaje(){
     let array = JSON.parse(localStorage.getItem("log"));
-    let fecha = new Date();
-    console.log("fecha");
-    array.push(document.getElementById("user").value+" ["+fecha.toISOtring()+"] - "+document.getElementById("mensaje").value);
+    array.push(document.getElementById("user").value+" ["+fechaActual()+"] - "+document.getElementById("mensaje").value);
     //array.push(document.getElementById("user").value+" ["+date.toISOtring()+"] - "+document.getElementById("mensaje").value);
     localStorage.setItem("log",JSON.stringify(array));
 }
