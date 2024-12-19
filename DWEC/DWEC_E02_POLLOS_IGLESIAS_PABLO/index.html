@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen</title>
+    <meta author="Pablo Pollos">
+    <style>
+        .eliminado{
+            display: none;
+        }
+        .element{
+            width: 60%;
+            padding: 10px;
+            background-color: wheat;
+            float: left;
+            margin: 5px;
+            border-radius: 10px;
+            text-align: left;
+            list-style: none;
+        }
+        .completado{
+            width: 60%;
+            padding: 10px;
+            background-color: wheat;
+            float: left;
+            margin: 5px;
+            border-radius: 10px;
+            text-align: left;
+            list-style: none;
+            text-decoration:line-through;
+        }
+        form{
+            height: 20px;
+            background-color: gainsboro;
+            padding: 10px;
+            margin-bottom: 10px;
+
+        }
+        .checkbox{
+            background-color:antiquewhite;
+            height: 20px;
+            width: 20px;
+            float: right;
+        }
+        .activeCheckbox{
+            background-color: red;
+            height: 20px;
+            width: 20px;
+            float: right;
+        }
+        .borrarTarea{
+            float: right;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form class="formulario" id="form">
+        <input type="text" name="mensaje" id="mensaje" placeholder="Mensaje...">
+        <button id="add-task">Añadir Tarea</button>
+        <button id="borrar">Borrar Lista</button>
+    </form>
+
+    <ul id="lista">   
+    </ul>
+
+    <script src="mensajes.js"></script>
+</body>
+</html>
