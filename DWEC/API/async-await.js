@@ -1,0 +1,70 @@
+"use strict"
+
+function cambio(){
+    
+}
+
+function pintarPost(respuesta,index) {
+    let cosa = document.getElementById('cosa');
+
+    let div = document.createElement('div');
+    div.setAttribute("class","post post"+index);
+
+    let h1 = document.createElement('h1');
+    h1.textContent = respuesta.title;
+
+    let p = document.createElement('p');
+    p.textContent = respuesta.body;
+    
+    let button = document.createElement('button');
+    button.textContent = "Comentarios";
+
+    button.addEventListener("click", cambio);
+
+    div.appendChild(h1);
+    div.appendChild(p);
+    div.appendChild(button);
+
+    cosa.append(div);
+}
+
+function pintarComentario(comentario,index) {
+    
+    let div2 = document.createElement('div');
+    div2.setAttribute("class","comment");
+
+    let h2 = document.createElement('h2')
+    h2.textContent = comentario.name
+
+    let email = document.createElement('p')
+    email.textContent = comentario.email
+
+    let body = document.createElement('p')
+    body.textContent = comentario.body
+
+    let div = document.querySelector('.post'+index);
+    div2.appendChild(h2);
+    div2.appendChild(email);
+    div2.appendChild(body);
+
+    div.appendChild(div2);
+}
+
+document.addEventListener('DOMContentLoaded', inicio );
+
+function inicio(){
+
+    for (let index = 1; index <= 10; index++) {
+        fetch('https://jsonplaceholder.typicode.com/posts/'+`${index}`)
+        .then((response) => response.json())
+        .then((json) =>pintarPost(json,index));
+    
+        fetch('https://jsonplaceholder.typicode.com/comments?postId='+`${index}`)
+        .then((response) => response.json())
+        .then((json) => json.forEach(element => {
+            pintarComentario(element,index);
+        }));
+        
+    }
+    
+};
