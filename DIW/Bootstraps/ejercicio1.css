@@ -1,0 +1,22 @@
+.container{
+    text-align: center;
+}
+.col-12{
+    background-color: rgb(117, 117, 255);
+    border-color: black;
+    border-style: solid;
+}
+.izda{
+    border-color: black;
+    border-style: solid;
+}
+.center{
+    background-color: rgb(255, 218, 117);
+    border-color: black;
+    border-style: solid;
+}
+.drch{
+    background-color: rgb(117, 255, 158);
+    border-color: black;
+    border-style: solid;
+}
