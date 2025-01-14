@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trailblazer - Perfil</title>
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
+    <style>
+        @import url(perfil.css);
+    </style>
+</head>
+<body>
+    <header>
+        <form action="inicio.html" class="inicioForm">
+            <button class="inicio" >
+                <div class="logo"></div>
+                <h1>TRAILBLAZER</h1>
+            </button>
+        </form>
+        <img class="fotoUser" src="img/fotoUser.png">
+
+        <form action="inicio.html" class="buttonForm">
+            <button class="login">Eliminar Perfil</button>
+        </form>
+        <form action="registro.html" class="buttonForm">
+            <button class="login">Modificar Perfil</button>
+        </form>
+    </header>
+    
+    <h1 class="title">Bienvenido, {Usuario}</h1>
+
+    <main>
+        <!--Estas tablan se generarían con script tras consultar la base de datos-->
+        <div class="bloque">
+            <div class="caja datosPersonales">
+                <h2 class="tituloCaja">Datos Personales</h2>
+                <table>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellidos</th>
+                        <th>Correo</th>
+                        <th>Peso</th>
+                        <th>Estatura</th>
+                    </tr>
+                    <tr>
+                        <td>Pablo</td>
+                        <td>Pollos Iglesias</td>
+                        <td>abcde@gmail.com</td>
+                        <td>75.45 kg</td>
+                        <td>1,82 cm</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="caja pulsaciones">
+                <h2 class="tituloCaja">Pulsaciones</h2>
+                <table>
+                    <tr>
+                        <th>Sprint</th>
+                        <th>Velocidad</th>
+                        <th>Cardio</th>
+                        <th>Fitness</th>
+                        <th>Sencillo</th>
+                    </tr>
+                    <tr>
+                        <td>140</td>
+                        <td>120</td>
+                        <td>100</td>
+                        <td>80</td>
+                        <td>60</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="caja tipoCorredor">
+                <h2 class="tituloCaja medioFondo">Corredor de medio fondo</h2>
+                <table>
+                    <tr>
+                        <th>5 km</th>
+                        <th>10 km</th>
+                        <th>Media maratón</th>
+                    </tr>
+                    <tr>
+                        <td>34,2 min</td>
+                        <td>71,4 min</td>
+                        <td>165 min</td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+
+        <div class="bloque">
+            <div class="barraActividades">
+                <h2 class="actividades">Actividades</h2>
+                <div class="buscador">
+                    <form method="GET" action="">
+                        <input type="image" src="img/search.svg" alt="Submit" class="buscar"/>
+                        <input type="text" id="busq" name="busq" placeholder="búsqueda" class="busqueda"/><br>
+                    </form>
+                </div>
+                <div class="ordenar">
+                    <form method="GET" action="">
+                        <div class="actOptions">
+                            <label name="orden">Ordenar</label>
+                            <select name="orden">
+                                <option value="casual">Nombre</option>
+                                <option value="casual">Fecha</option>
+                            </select>
+                        </div>
+                        
+                        <div class="actOptions">
+                            <label name="add" class="addLabel">Añadir</label>
+                            <input type="image" src="img/plus.svg" alt="Add" class="add"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <hr>
+
+            <div class="trail">
+                <h3 class="trailNombre">Nombre</h3>
+                <p class="tipoEntrenamiento">Tipo Entrenamiento</p>
+                <p class="trailFecha">15/12/2024</p>
+                <form method="GET" action="" >
+                    <input type="image" src="img/eye.svg" alt="Submit" class="ver"/>
+                </form>
+
+            </div>
+
+            <div class="trail">
+                <h3 class="trailNombre">Nombre</h3>
+                <p class="tipoEntrenamiento">Tipo Entrenamiento</p>
+                <p class="trailFecha">15/12/2024</p>
+                <form method="GET" action="" >
+                    <input type="image" src="img/eye.svg" alt="Submit" class="ver"/>
+                </form>
+
+            </div>
+
+            <div class="trail">
+                <h3 class="trailNombre">Nombre</h3>
+                <p class="tipoEntrenamiento">Tipo Entrenamiento</p>
+                <p class="trailFecha">15/12/2024</p>
+                <form method="GET" action="" >
+                    <input type="image" src="img/eye.svg" alt="Submit" class="ver"/>
+                </form>
+
+            </div>
+
+            <div class="trail">
+                <h3 class="trailNombre">Nombre</h3>
+                <p class="tipoEntrenamiento">Tipo Entrenamiento</p>
+                <p class="trailFecha">15/12/2024</p>
+                <form method="GET" action="" >
+                    <input type="image" src="img/eye.svg" alt="Submit" class="ver"/>
+                </form>
+
+            </div>
+
+            <div class="trail">
+                <h3 class="trailNombre">Nombre</h3>
+                <p class="tipoEntrenamiento">Tipo Entrenamiento</p>
+                <p class="trailFecha">15/12/2024</p>
+                <form method="GET" action="" >
+                    <input type="image" src="img/eye.svg" alt="Submit" class="ver"/>
+                </form>
+
+            </div>
+
+        </div>
+
+    </main>
+</body>
+</html>
