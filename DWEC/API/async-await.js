@@ -1,29 +1,28 @@
 "use strict"
 
-function cambio(){
-    
-}
-
 function pintarPost(respuesta,index) {
     let cosa = document.getElementById('cosa');
-
-    let div = document.createElement('div');
-    div.setAttribute("class","post post"+index);
 
     let h1 = document.createElement('h1');
     h1.textContent = respuesta.title;
 
+    let user = document.createElement('a');
+    user.setAttribute("href","user.html?userId="+respuesta.userId);
+    user.textContent = respuesta.userId;
+
     let p = document.createElement('p');
     p.textContent = respuesta.body;
+
+    let div = document.createElement('div');
+    div.setAttribute("class","post post"+index);
+
     
     let button = document.createElement('button');
     button.textContent = "Comentarios";
 
-    button.addEventListener("click", cambio);
-
     div.appendChild(h1);
+    div.appendChild(user);
     div.appendChild(p);
-    div.appendChild(button);
 
     cosa.append(div);
 }
