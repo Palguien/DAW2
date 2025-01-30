@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css"> 
+    <title>Tabla Bootstrap</title>
+</head>
+<body>
+    <script src="js/bootstrap.min.js"></script>
+    <h1 class="text-center">Tabla - Pablo Pollos</h1>
+    <table class="table table-striped text-center table-bordered">
+        <thead class="table-dark">
+        <tr>
+            <th scope="col" rowspan="2">ID</th>
+            <th scope="col" rowspan="2">Nombre</th>
+            <th scope="col" colspan="2">Información</th>
+            <th scope="col" rowspan="2">Acciones</th>
+        </tr>
+        <tr>
+            <th scope="col">Edad</th>
+            <th scope="col">Ciudad</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Juan</td>
+            <td>30</td>
+            <td>Madrid</td>
+            <td>
+                <button type="button" class="btn btn-primary">Editar</button>
+                <button type="button" class="btn btn-danger">Eliminar</button>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>María</td>
+            <td>25</td>
+            <td>Barcelona</td>
+            <td>
+                <button type="button" class="btn btn-primary">Editar</button>
+                <button type="button" class="btn btn-danger">Eliminar</button>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>Pedro</td>
+            <td>35</td>
+            <td>Valencia</td>
+            <td>
+                <button type="button" class="btn btn-primary">Editar</button>
+                <button type="button" class="btn btn-danger">Eliminar</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>

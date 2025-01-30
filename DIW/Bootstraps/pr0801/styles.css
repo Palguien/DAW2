@@ -1,0 +1,44 @@
+body{
+    margin: 0px;
+    background-color: rgba(224, 255, 177, 0.719);
+}
+.navbar{
+    margin: 0px;
+}
+.hero{
+    background-image: url("img/balconing.jpg");
+    background-size: cover;
+    margin: 0px;
+
+}
+h1, .lead{
+    color: rgb(255, 227, 152);
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+footer{
+    color: aliceblue;
+    background-color: black;
+    text-align: center;
+}
+.container{
+    background-color: blanchedalmond;
+    border-radius: 20px;
+    padding: 15px;
+    margin-top: 15px;
+    box-shadow: 1px 1px 1px;
+}
+label, .lead{
+    font-weight: bold;
+}
+
+.zoom {
+    transition: transform .2s; /* Animation */
+}
+
+.zoom:hover {
+    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.navbar-custom {
+    background-color: lightgreen;
+}

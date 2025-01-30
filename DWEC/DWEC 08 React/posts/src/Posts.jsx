@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Comentarios from "./Comentarios.jsx"
 import './posts.css'
 function Posts() {
     const [posts, setPosts] = useState([])
@@ -34,6 +35,7 @@ function Posts() {
                         <h1>{post.title}</h1>
                         <p>{post.body}</p>
                         <h2>User: {users[post.userId-1]?.username}</h2>
+                        <Comentarios postId={post.id}/>
                     </div>
                 ) 
             }
