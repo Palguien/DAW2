@@ -1,0 +1,7 @@
+#Ejecutar react
+
+    npm run dev
+
+#Instalar router de react
+    
+    npm install react-router

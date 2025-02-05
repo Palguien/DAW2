@@ -34,6 +34,7 @@ function Posts() {
                     <div className="post" key={post.id}>
                         <h1>{post.title}</h1>
                         <p>{post.body}</p>
+                        <Link to={`/usuario/${post.id}`}></Link>
                         <h2>User: {users[post.userId-1]?.username}</h2>
                         <Comentarios postId={post.id}/>
                     </div>

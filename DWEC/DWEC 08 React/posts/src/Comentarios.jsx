@@ -2,20 +2,23 @@ import { useState, useEffect } from 'react'
 
 const Comentarios =  ({postId}) => {
     const [comments, setComentarios] = useState([])
-    const [users, setUsers] = useState([])
     const [loading, setLoading] = useState(true)
 
     useEffect( () => {
-        async function fetchPosts(){
+        async function fetchComentarios(){
             const res = await fetch('https://jsonplaceholder.typicode.com/comments?postId='+`${postId}`)
             const postList = await res.json()
             setComentarios(postList)
             setLoading(false)
         }
-        fetchPosts()
+        fetchComentarios()
     }, [])  //Lista de dependencias vacía
 
-    return <details>
+    async function onToggle(e) {
+        if(!loading) setLoading(true);
+    }
+
+    return <details onToggle={onToggle}>
         <summary>Comentarios</summary>
             {
             comments.map(comment => 
