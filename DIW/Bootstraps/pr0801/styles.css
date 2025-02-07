@@ -2,6 +2,13 @@ body{
     margin: 0px;
     background-color: rgba(224, 255, 177, 0.719);
 }
+.nav-item:hover{
+    background-color: green;
+    border-radius: 20px;
+}
+.nav-item:hover .nav-link{
+    color: aliceblue;
+}
 .navbar{
     margin: 0px;
 }

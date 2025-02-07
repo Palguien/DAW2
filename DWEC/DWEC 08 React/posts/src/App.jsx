@@ -4,12 +4,11 @@ import Posts from './Posts.jsx'
 import Perfil from './Perfil.jsx'
 function App() {
 
-
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Posts/>}/>
-        <Route path="/usuarios/:id" element={<Perfil/>}/>
+        <Route path="/usuario/:userId" element={<Perfil/>}/>
       </Routes>
     </BrowserRouter>
 
