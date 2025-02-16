@@ -1,0 +1,14 @@
+.hola{
+    color: blue;
+    animation: rotacion 5s infinite linear;
+}
+
+@keyframes rotacion{
+    0% {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(360deg);
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(-360deg) rotateZ(-360deg);
+    }
+}
+

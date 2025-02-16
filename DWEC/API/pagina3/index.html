@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .post{
+            background-color: yellow;
+            border-color: black;
+            border: solid;
+            margin: 10px;
+        }
+        .comment{
+            background-color: orange;
+            margin: 5px;
+            margin-left: 40px;
+        }
+        .datos{
+            background-color: bisque;
+            text-align: center;
+            padding: 5px;
+        }
+        .extra{
+            background-color: orange;
+            margin: 15px;
+            padding: 5px;
+            border-radius: 30px;
+        }
+        .vacio{
+            display: none;
+        }
+    </style>
+</head>
+<body id="cosa">
+    <div id="cosa2" class="datos">
+    </div>
+    <div id="albums" class="extra">
+        <h2>Albums</h2>
+    </div>
+    <div id="todos" class="extra">
+        <h2>Todos</h2>
+    </div>
+    <script>
+        let queryString = window.location.search;
+        console.log(queryString);
+        let urlParams = new URLSearchParams(queryString);
+        let id = urlParams.get('userId');
+
+        let cosa = document.getElementById('cosa');
+        if(id==null){
+            let chisme = document.getElementById("albums");
+            chisme.setAttribute("class","vacio");
+            chisme = document.getElementById("todos");
+            chisme.setAttribute("class","vacio");
+
+            let script = document.createElement('script');
+            script.setAttribute("src","async-await.js");
+            cosa.append(script);
+        }else{
+            let script = document.createElement('script');
+            script.setAttribute("src","user.js");
+            cosa.append(script);
+        }
+        
+    </script>
+</body>
+</html>

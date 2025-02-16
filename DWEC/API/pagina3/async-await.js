@@ -1,29 +1,28 @@
 "use strict"
 
-function cambio(){
-    
-}
-
 function pintarPost(respuesta,index) {
     let cosa = document.getElementById('cosa');
-
-    let div = document.createElement('div');
-    div.setAttribute("class","post post"+index);
 
     let h1 = document.createElement('h1');
     h1.textContent = respuesta.title;
 
+    let user = document.createElement('a');
+    user.setAttribute("href","index.html?userId="+respuesta.userId);
+    user.textContent = respuesta.userId;
+
     let p = document.createElement('p');
     p.textContent = respuesta.body;
+
+    let div = document.createElement('div');
+    div.setAttribute("class","post post"+index);
+
     
     let button = document.createElement('button');
     button.textContent = "Comentarios";
 
-    button.addEventListener("click", cambio);
-
     div.appendChild(h1);
+    div.appendChild(user);
     div.appendChild(p);
-    div.appendChild(button);
 
     cosa.append(div);
 }
@@ -50,11 +49,9 @@ function pintarComentario(comentario,index) {
     div.appendChild(div2);
 }
 
-document.addEventListener('DOMContentLoaded', inicio );
 
-function inicio(){
-
-    for (let index = 1; index <= 10; index++) {
+    console.log("funciona");
+    for (let index = 1; index <= 50; index++) {
         fetch('https://jsonplaceholder.typicode.com/posts/'+`${index}`)
         .then((response) => response.json())
         .then((json) =>pintarPost(json,index));
@@ -67,4 +64,7 @@ function inicio(){
         
     }
     
-};
+
+
+console.log("funciona2");
+
