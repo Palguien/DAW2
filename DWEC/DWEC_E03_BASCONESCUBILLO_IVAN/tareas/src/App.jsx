@@ -9,13 +9,13 @@ export default function App() {
   const [change, setChange] = useState(false);
 
   useEffect(()=>{
-    async function fecthTareas() {
+    async function fetchTareas() {
       const rest = await fetch("http://localhost:3000/object");
       const result = await rest.json();
       setTareas(result);
       setChange(false)
     }
-    fecthTareas();
+    fetchTareas();
   },[change]);
 
   return (
