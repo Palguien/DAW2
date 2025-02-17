@@ -1,0 +1,209 @@
+body{
+    background-color: rgb(241, 213, 160);
+    margin: 0px;
+}
+/*header*/
+.inicio{
+    height: 80px;
+    background-color: orange;
+    margin-top: 0px;
+    float: left;
+    border: none;
+}
+.inicio:hover{
+    cursor: pointer;
+    background-color: rgb(196, 105, 2);
+}
+header{
+    width: 100%;
+    height: 80px;
+    background-color: orange;
+    margin-top: 0px;
+    border-bottom: solid;
+    border-bottom-color: rgb(196, 105, 2);
+}
+.buttonForm{
+    height: 100%;
+    float: right;
+}
+.login{
+    height: 75%;
+    width: 150px;
+    color:rgb(0, 0, 112);
+    background-color: orange;
+    float: right;
+    font-size: larger;
+    font-weight: bold;
+    margin: 10px;
+    border-radius: 40px;
+}
+.login:hover{
+    cursor: pointer;
+    background-color: rgb(196, 105, 2);
+}
+.logo{
+    content: url(img/logo.png);
+    height: 75%;
+    margin: 10px;
+    border-radius: 40px;
+    float: left;
+}
+h1{
+    height: 75%;
+    margin: 10px;
+    float: left;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 2;
+    color: rgb(37, 37, 37);
+}
+.fotoUser{
+    float: right;
+    height: 80px;
+    width: auto;
+}
+/*contenido*/
+.title{
+    width: 100%;    
+}
+main{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+.bloque{
+    width: 80%;
+    background-color: antiquewhite;
+    border-radius: 40px;
+    box-shadow: 2px 2px 2px 2px;
+    padding: 40px;
+    margin-bottom: 20px;
+}
+h2,th,td{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(37, 37, 37);
+}
+h2,th{
+    font-weight: bold;
+}
+th,td{
+    width: 1%;
+    text-align: center;
+    background-color: aliceblue;
+    border-radius: 10px;
+    height: 30px;
+}
+table{
+    border: solid;
+    border-color: aliceblue;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.tituloCaja{
+    margin-top: -20px;
+    border: groove;
+    border-color: aliceblue;
+    border-radius: 10px;
+    padding: 5px;
+    width:fit-content;
+    position: relative;
+    z-index: 1;
+    top:30px;
+    right: 10px;
+    background-color: antiquewhite;
+}
+/*Header Actividades*/
+.barraActividades{
+    background-color: rgb(255, 200, 97);
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    border: groove;
+}
+
+.buscador{
+    height: 65%;
+    margin: 10px;
+    float: left;
+    border-radius: 40px;
+    background-color: rgb(175, 175, 175);
+    box-shadow: 1px 1px 1px 1px;
+}
+.buscar{
+    height: 30px;
+    width: 30px;
+    float: left;
+    margin: 15px;
+}
+.busqueda{
+    border: none;
+    border-radius: 40px;
+    text-align: center;
+    padding: 3px;
+    float: left;
+    margin-top: 17px;
+    margin-left: 5px;
+    margin-right: 10px;
+    height: 20px;
+}
+.add,.orden{
+    height: 20px;
+    margin-left: 5px;
+}
+.add:hover{
+    background-color:darkgrey;
+    border-radius: 40px;
+}
+.actOptions{
+    margin-top: 8px;
+    background-color: aliceblue;
+    border-radius: 40px;
+    box-shadow: 1px 1px 1px; 
+    width: 140px;
+    display: flex;
+    justify-content:center;
+    padding: 3px;
+}
+/*Actividades*/
+.ver{
+    height: 30px;
+    margin-top: 15px;
+    background-color:whitesmoke;
+    border: double grey;
+    border-radius: 40px;
+}
+.ver:hover{
+    background-color: darkgrey;
+}
+.trail{
+    background-color: aliceblue;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px;
+    width: 100%;
+    display: flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    margin-top: 15px;
+}
+.label,h3,p{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.tipoEntrenamiento,.trailFecha{
+    margin-top: 20px;
+}
+/*Responsive*/
+@media(max-width:725px){
+    h1{
+        display: none;
+    }
+}
+@media(max-width:530px){
+    .login,.buttonForm{
+        height: 60%;
+        margin-top: 0px;
+        width: 200px;
+    }
+
+}

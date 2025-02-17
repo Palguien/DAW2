@@ -1,0 +1,165 @@
+/*1 - header footer*/
+img{
+    background-color: #EBECED;
+    height: 100px;
+    width: 100%;
+}
+.grisHeader{
+    background-color: #37454D;
+    height: 50px;
+    width: 100%;
+}
+.header{
+    width: 100%;
+    clear:both;
+}
+.footer{
+    width: 100%;
+    clear:both;
+}
+.grisFooter{
+    background-color: #293339;
+    height: 50px;
+    width: 100%;
+}
+.footerText{
+    background-color: #37454D;
+    height: 100px;
+    color: white;
+    text-align: center;
+    width: 100%;
+    line-height: 6;
+}
+body{
+    background-color: #EBECED;
+}
+.caja{
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    margin: 5px;
+}
+/*2 - aside*/
+aside{
+    background-color: white;
+    border: solid;
+    border-color: #BBB;
+    width: 250px;
+    height: 600px;
+    margin-right: 14px;
+
+}
+main{
+    background-color: blue;
+    width: 816px;
+    height: 600px;
+
+}
+.elemento{
+    height: 23%;
+    margin: 4%;
+    color: white;
+    background-color: #007FAD;
+    line-height: 7;
+    text-align: center;
+    font-size: larger;
+}
+.elemento:hover{
+    position: relative;
+    left: 15px;
+    background-color: #004760;
+}
+/*3 - main*/
+.hotel{
+    height: 200px;
+    width: 816px;
+    background-color: white;
+    border: solid;
+    border-color: #CCC;
+    display: flex;
+    justify-content: left;
+    margin-bottom: 5px;
+}
+.corazon{
+    content: url(img/corazon.png);
+    position: relative;
+    width: 25px;
+    height: 25px;
+    left: 20px;
+    top: 20px;
+    z-index: 1;
+}
+.primer{
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    margin-left: -25px;
+}
+.segundo{
+    margin: 1%;
+    width: 300px;
+}
+.tres_estrellas{
+    content: url(img/tres_estrellas.png);
+    width: 100px;
+    height: 20px;
+}
+.cuatro_estrellas{
+    content: url(img/cuatro_estrellas.png);
+    width: 100px;
+    height: 20px;
+}
+
+.tercero{
+    border-left-style: solid;
+    border-right-style: solid;
+    border-left-color: #CCC;
+    border-right-color: #CCC;
+    width: 150px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+.muy_bien::before{
+    content: url(img/muy_bien.png);
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+.bien::before{
+    content: url(img/bien.png);
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+.regular::before{
+    content: url(img/regular.png);
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+/*4 - toques finales*/
+.cuarto{
+    width: 135px;
+    text-align: center;
+}
+.descuento{
+    height: 35px;
+    width: 50px;
+    background-color: #C94A30;
+    color: white;
+    line-height: 2;
+    margin-top: 20%;
+    position: relative;
+    left: 80%;
+}
+button{
+    background-color: #66a400;
+    height: 35px;
+    width: 125px;
+    color: white;
+    font-weight: bold;
+    margin-top: 70%;
+}
+button:hover{
+    background-color: #4c7b00;
+}

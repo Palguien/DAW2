@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trailblazer - Registro</title>
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
+    <style>
+        @import url(registro.css);
+    </style>
+</head>
+<body>
+    <header>
+        <form action="inicio.html" class="inicioForm">
+            <button class="inicio" >
+                <div class="logo"></div>
+                <h1>TRAILBLAZER</h1>
+            </button>
+        </form>
+        <form action="login.html" class="buttonForm">
+            <button class="login">Login</button>
+        </form>
+    </header>
+
+    <div class="cajaForm">
+        <form class="formulario" method="post" action="perfil.html">
+            <h2>Regístrate</h2>
+            <fieldset class="fieldset1">
+                <legend>Datos</legend>
+                <input type="text" name="user" placeholder="USUARIO" class="input1"><br>
+                <input type="password" name="password" placeholder="CONTRASEÑA" class="input1"><br>
+                <input type="text" name="nombre" placeholder="NOMBRE" class="input1"><br>
+                <input type="TEXT" name="apellidos" placeholder="APELLIDOS" class="input1"><br>
+                <input type="email" name="email" placeholder="EMAIL" class="input1"><br>
+                <input type="number" name="estatura" placeholder="ESTATURA" class="input1" min="0"><br>
+                <input type="number" name="peso" placeholder="PESO" class="input1" min="0"><br>
+            </fieldset>
+
+            <fieldset class="fieldset2">
+                <legend>Pulsaciones</legend>
+                <input type="number" name="sprint" placeholder="SPRINT" class="input2" min="0" max="200"><br>
+                <input type="number" name="valocidad" placeholder="VELOCIDAD" class="input2" min="0" max="200"><br>
+                <input type="number" name="cardio" placeholder="CARDIO" class="input2" min="0" max="200"><br>
+                <input type="number" name="fitness" placeholder="FITNESS" class="input2" min="0" max="200"><br>
+                <input type="number" name="sencillo" placeholder="SENCILLO" class="input2" min="0" max="200"><br>
+            
+                <div class="cajaFinal">
+                    <label name="tipo">Tipo de corredor</label>
+                    <select name="tipo">
+                        <option value="casual">Casual</option>
+                        <option value="casual">Medio Fondo</option>
+                        <option value="casual">Fondo</option>
+                        <option value="casual">Trail</option>
+                    </select>
+                    <input type="submit" value="Enviar" class="enviar">
+                </div>
+
+            </fieldset>
+           
+            
+        </form>        
+    </div>
+</body>
+</html>

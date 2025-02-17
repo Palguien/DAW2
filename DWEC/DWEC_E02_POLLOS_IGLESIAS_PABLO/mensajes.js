@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded',event => {
     }else{
         array = [];
     }
+
+    //console.log(array);
     array.sort();
     //Load mensajes
     renderTareas(array);

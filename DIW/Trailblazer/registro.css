@@ -1,0 +1,141 @@
+body{
+    background-color: rgb(241, 213, 160);
+    margin: 0px;
+}
+.banner{
+    width: 100%;
+    content: url(img/banner.jpg);
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+}
+/*header*/
+.inicio{
+    height: 80px;
+    background-color: orange;
+    margin-top: 0px;
+    float: left;
+    border: none;
+}
+.inicio:hover{
+    cursor: pointer;
+    background-color: rgb(196, 105, 2);
+}
+header{
+    width: 100%;
+    height: 80px;
+    background-color: orange;
+    margin-top: 0px;
+    border-bottom: solid;
+    border-bottom-color: rgb(196, 105, 2);
+}
+.buttonForm{
+    height: 100%;
+}
+.login{
+    height: 75%;
+    width: 150px;
+    color:rgb(0, 0, 112);
+    background-color: orange;
+    float: right;
+    font-size: larger;
+    font-weight: bold;
+    margin: 10px;
+    border-radius: 40px;
+}
+.login:hover{
+    cursor: pointer;
+    background-color: rgb(196, 105, 2);
+}
+.logo{
+    content: url(img/logo.png);
+    height: 75%;
+    margin: 10px;
+    border-radius: 40px;
+    float: left;
+}
+h1{
+    height: 75%;
+    margin: 10px;
+    float: left;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 2;
+    color: rgb(37, 37, 37);
+}
+/*Formulario*/
+label,legend{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.cajaForm{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    margin-top: 100px;
+}
+h2{
+    text-align: center;
+    width: 60%;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(37, 37, 37);
+}
+.formulario{
+    width: 600px;
+    display: flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    background-color: antiquewhite;
+    border-radius: 40px;
+    box-shadow: 2px 2px 2px 2px;
+
+}
+fieldset{
+    width: 40%;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+input{
+    margin: 10px;
+    height: 40px;
+    background-color: aliceblue;
+    border-radius: 40px;
+    width: 80%;
+    text-align: center;
+
+}
+.enviar{
+    background-color: whitesmoke;
+    font-weight: bold;
+}
+.enviar:hover{
+    background-color: orange;
+    cursor: pointer;
+}
+.cajaFinal{
+    width: 100%;
+    border-top-style: groove;
+    border-color: aliceblue;
+    display: flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+select{
+    height: 25px;
+    margin-left: 10px;
+}
+label,select{
+    margin-top: 20px;
+}
+.enviar{
+    width: 60%;
+}
+
+/*Responsive*/
+@media(max-width:500px){
+    .login{
+        width: 100px;
+        font-size: medium;
+    }
+    
+}
