@@ -1,9 +1,9 @@
-// Ivan Bascones Cubillo
+// Imports
 import { useEffect, useState } from 'react'
 import './App.css'
 
 
-
+//App
 export default function App() {
   const [tareas, setTareas] = useState([]);
   const [change, setChange] = useState(false);
@@ -25,10 +25,9 @@ export default function App() {
         <input type='text' name='task' placeholder='Nombre de la tarea' id='name'/>
         
         <button type='submit' onClick={(e) =>{
-          // Añadir una nueva tarea a la BBDD
           e.preventDefault()
           let task = document.getElementById("name");
-          
+          //1 -- Añadir Tarea
           async function newTask(task) {
             let tarea = {
               "name" : task.value,
@@ -63,8 +62,8 @@ export default function App() {
               <td>{tarea.name}</td>
               <td>{checkBox(tarea.value,tarea.name)}</td>
               <td><button type='submit' onClick={(e) =>{
-                // Borrar la tarea indicada
                 e.preventDefault();
+                //2 -- Borrar Tarea
                 async function deleteTask() {
                   const res = await fetch(`http://localhost:3000/object/${tarea.name}`,{method:"DELETE"})
                 }
@@ -78,8 +77,7 @@ export default function App() {
       </table>
     </div>
   )
-
-// Modificar el estado de la tarea
+  //3 -- Cambiar estado: por ahora falla
   function checkBox(value,name){
     if(value === "false"){
       return (
@@ -114,5 +112,3 @@ export default function App() {
     }
   }
 }
-
-
